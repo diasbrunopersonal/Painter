@@ -20,6 +20,8 @@ const createNewBoard = (width, height) => {
     board.style.gridTemplateRows = `repeat(${width}, 50px)`;
     board.style.gridTemplateColumns = `repeat(${height}, 50px)`;
 
+    document.querySelectorAll(".square.colored").forEach((square) => { square.remove() });
+
     for (let boardHeight = 0; boardHeight < height; boardHeight++) {
         for (let boardWidth = 0; boardWidth < width; boardWidth++) {
             let square = document.createElement("div");
